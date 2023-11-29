@@ -10,6 +10,14 @@ from datetime import datetime
 from pick import pick
 from time import sleep
 
+from src.loader import DataLoader
+
+# Initialize DataLoader
+data_loader = DataLoader()
+
+# Load data from a Slack channel
+slack_data = data_loader.load_slack_data("C:\Users\hab\Downloads\Anonymized_B6SlackExport_25Nov23")
+
 class SlackDataLoader:
     '''
     Slack exported data IO class.
